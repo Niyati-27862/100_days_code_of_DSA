@@ -1,0 +1,34 @@
+// Remove all occurrences of val in array and return count of remaining elements
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    int arr[100];
+
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int val;
+    scanf("%d", &val);
+
+    int k = 0;
+
+    for(int i = 0; i < n; i++) {
+        if(arr[i] != val) {
+            arr[k] = arr[i];
+            k++;
+        }
+    }
+
+    printf("%d\n", k);
+
+    for(int i = 0; i < k; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
